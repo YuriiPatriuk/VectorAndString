@@ -19,4 +19,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Train.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Railway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

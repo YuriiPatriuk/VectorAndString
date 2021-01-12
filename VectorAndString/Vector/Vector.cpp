@@ -3,6 +3,7 @@
 #include <ctime>
 #include <string>
 #include <algorithm>
+#include "Railway.h"
 using namespace std;
 
 template <typename T>
@@ -67,8 +68,8 @@ int main()
     //
     //sort(v.rbegin(),v.rend());
     //printVector(v, "Vector");
-    int count=0;
-    vector<string> words{"a","bt","zc","k","h","bretert"};
+    //int count=0;
+    //vector<string> words{"a","bt","zc","k","h","bretert"};
     /*cout << "Enter count of words: ";
     cin >> count;
     for (size_t i = 0; i < count; i++)
@@ -78,36 +79,49 @@ int main()
         cin >> word;
         words.push_back(word);
     }*/
-    printVector(words, "Vector:");
-    sort(words.begin(), words.end());
+    //printVector(words, "Vector:");
+    //sort(words.begin(), words.end());
 
-    printVector(words, "After sort:");
-    sort(words.rbegin(), words.rend());
+    //printVector(words, "After sort:");
+    //sort(words.rbegin(), words.rend());
 
-    printVector(words, "After sort by desc:");
+    //printVector(words, "After sort by desc:");
 
-    words.erase(words.begin());
-    words.erase(words.end()-1);
-    printVector(words, "After del first and last:");
+    //words.erase(words.begin());
+    //words.erase(words.end()-1);
+    //printVector(words, "After del first and last:");
+    //
+    //words.insert(words.begin()+words.size() / 2, {"first","second","third"});
+    //printVector(words, "After insert:");
+
+    //sort(words.begin(), words.end()-words.size() / 2);
+    //printVector(words, "After sort first half:");
+    //sort(words.begin() + words.size() / 2, words.end());
+    //printVector(words, "After sort second half:");
+
+    //string foundWord;
+    //cout << "What to find: ";
+    //cin >> foundWord;
+    //auto res=find(words.begin(), words.end(),foundWord);
+    //if (res != words.end()) //res - вказівник на значення 
+    //{
+    //   cout << "True" << endl;
+    //   cout << "Pos: " << res - words.begin() << endl;
+    //}
+    //else
+    //    cout << "False" << endl;
+
+    Railway r;
+    Train t;
+    t.addInformation(2, "we");
+    t.setTime(6, 7);
+    r.addTrain(123, "qwerty", 3, 34);
+    r.addTrain(125, "y", 3, 35);
+    r.addTrain(345, "q", 1, 55);
+    r.input();
+    r.print();
+    r.deleteTrain(123);
+    r.print();
     
-    words.insert(words.begin()+words.size() / 2, {"first","second","third"});
-    printVector(words, "After insert:");
-
-    sort(words.begin(), words.end()-words.size() / 2);
-    printVector(words, "After sort first half:");
-    sort(words.begin() + words.size() / 2, words.end());
-    printVector(words, "After sort second half:");
-
-    string foundWord;
-    cout << "What to find: ";
-    cin >> foundWord;
-    auto res=find(words.begin(), words.end(),foundWord);
-    if (res != words.end()) //res - вказівник на значення 
-    {
-       cout << "True" << endl;
-       cout << "Pos: " << res - words.begin() << endl;
-    }
-    else
-        cout << "False" << endl;
 
 }
